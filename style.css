@@ -6,7 +6,7 @@ html{
 }
 body{
   margin:0px;
-  overflow:auto;
+  overflow:hidden;
   display:flex;
   margin:auto;
   align-items:center;
