@@ -39,6 +39,14 @@ body{
   border-radius:10px;
   background-color: #333;
   box-shadow:rgba(10,10,10,1) 0px 3px 8px;
+  transition-timing-function:ease-in;
+  transition:2s;
+}
+.main:hover{
+  transition-timing-function:ease-out ;
+  transition:2s;
+  width:600px;
+
 }
 .name{
   font-family:'Roboto';
