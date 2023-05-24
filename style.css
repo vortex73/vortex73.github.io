@@ -35,8 +35,8 @@ body{
   flex-direction:column;
   font-family:'Roboto',sans-serif;
   padding=500px;
-  width:20vw;
-  height:60vh;
+  width:300px;
+  height:500px;
   align-items:center;
   justify-content:center;
  /* border: 2px solid red;*/
@@ -51,7 +51,7 @@ body{
   display:flex;
   transition-timing-function:ease-out ;
   transition:0.5s;
-  width:30vw;
+  width:500px;
 }
 
 .name{
