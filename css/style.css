@@ -15,18 +15,25 @@ body{
   padding : 0 0 0 0;
   background: #000000;
   overflow: hidden;
-  width : 100%;
+  width : 100vw;
 }
 .box{
   font-family: audiowide;
   display : flex;
   height : 25vh;
   width : 40vw;
-  margin : 20px;
+  margin : 20vh;
   color : white;
   flex-direction : column;
   justify-content: center;
   align-items : center;
   border : 2px solid white;
   border-radius : 13px;
+}
+@media (max-width : 780px){
+  .box{
+    width: 60%;
+    height: 30%;
+    flex-direction: column;
+  }
 }
