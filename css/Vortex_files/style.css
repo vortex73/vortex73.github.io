@@ -5,13 +5,12 @@
   box-sizing: border-box;
 }
 html{
-  font-family: 'Fira Mono';font-size: 19px;
+  font-family: 'Fira',monospace;
 }
 .main{
-  height: 100vh;
+  height: 80vh;
   position: relative;
-  margin-top: 15vh;
-  
+  box-sizing: : border-box;
 }
 body{
   display: flex;
@@ -42,7 +41,7 @@ footer{
   background: #000000;
   position: absolute;
   bottom: 0;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
   justify-content: space-between;
   color : #6a6a6a;
@@ -52,6 +51,7 @@ footer{
 
 }
 .box{
+  font-family: audiowide;
   display : flex;
   height : 25vh;
   width : 40vw;
@@ -63,26 +63,19 @@ footer{
   border : 2px solid white;
   border-radius : 13px;
 }
-.new{
- /* border: 2px solid red;*/
-  padding: 20px;
-  height: 90vh;
-  width: 100vw;
-  position: relative;
+
+@media (max-width : 780px){
+  .box{
+    width: 60%;
+    height: 30%;
+    flex-direction: column;
+  }
 }
 
-.heading{
-  /*border: 2px solid blue;*/
-  padding: 60px;
-  position:absolute;
-  top:30;
-}
 @media (max-width : 500px){
   .box{
-    width: 60vw;
-    margin: 10vh;
-    margin-top: 30vh;
-    height: 25vh;
+    width: 80%;
+    height: 70%;
     padding: 10px;
     font-size: 10px;
     flex-direction: column;
@@ -92,17 +85,6 @@ footer{
     justify-content: space-between;
     box-sizing: border-box;
     left: 5px;
-  }
-  body{
-    overflow: scroll;
-  }
-  .main{
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    margin-top : 5px;
-    justify-content: center;
-    align-items: center;
   }
   
 }
