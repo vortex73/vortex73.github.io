@@ -7,6 +7,11 @@
 html{
   font-family: 'Fira',monospace;
 }
+.main{
+  height: 80vh;
+  position: relative;
+  box-sizing: : border-box;
+}
 body{
   display: flex;
   flex-direction : column;
@@ -16,11 +21,7 @@ body{
   padding : 0 0 0 0;
   background: #000000;
   overflow: hidden;
-
   width : 100vw;
-
-  width: 100vw;
-
 }
 header{
   position : absolute;
@@ -37,14 +38,13 @@ a:hover{
 }
 footer{
   display:flex;
-  position: absolute;
   background: #000000;
-  bottom: 20px;
+  position: absolute;
+  bottom: 0;
   padding: 20px;
-  width: 40vw;
+  width: 100%;
   justify-content: space-between;
   color : #6a6a6a;
-  
 }
 .contact{
   justify-content: space-between;
