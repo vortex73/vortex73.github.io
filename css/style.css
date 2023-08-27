@@ -1,12 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body{
   font-family: ariai,sans-serif;
   justify-content: center;
+  line-height: 1.5;
   display: flex;
   margin: 0;
   color: white;
   min-height: 100vh;
   background: #000;
-  
   flex-direction: column;
 }
 .innerbody{
@@ -17,14 +22,18 @@ body{
   min-height: 100vh;
 
 }
+.about{
+  font-weight: bold;
+}
 .header1{
   position: absolute;
   top: 0;
+  padding: 10px;
   box-sizing: border-box;
   min-width: 100vw;
   overflow: auto;
   display: flex;
-  
+  border: 2px solig green;
   justify-content: center;
   flex-shrink: 0;
 }
@@ -37,20 +46,39 @@ body{
 }
 a{
   color:white;
+  text-decoration: none;
 }
 a:hover{
   font-weight: bold;
 }
+
 .name{
   font-family: "Courier New",monospace;
   font-weight: bold;
   font-size: 24px;
 }
 .nav li{
+  font-family: "Courier New",monospace;
   display: inline;
 }
+.content{
+  margin:0;
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  padding: 40px;
+}
+.para{
+  display:flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+}
 .status{
-  border: 2px solid white;
   display :flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -67,4 +95,20 @@ a:hover{
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+@media(max-width:700px){
+  .myfoot{
+    width:100%;
+    min-width: 100%;
+  }
+  body{
+    overflow: hidden;
+    border:2px solid red;
+  }
+  header {width:100%;}
+  header{overflow:hidden;}
+  .status{
+    height:40vw;
+    padding:10px;
+  }
 }
