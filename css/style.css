@@ -1,110 +1,48 @@
-*{
-  padding : 0;
-  margin: 0;
-  justify-content: center;
-  box-sizing: border-box;
-}
-html{
-  font-family: 'Fira Mono';font-size: 19px;
-}
-.main{
-  height: 100vh;
-  position: relative;
-  margin-top: 15vh;
-  
-}
 body{
-  display: flex;
-  flex-direction : column;
-  justify-content : center;
-  align-items: center;
-  height : 100vh;
-  padding : 0 0 0 0;
-  background: #000000;
-  overflow: hidden;
-  width : 100vw;
-}
-header{
-  position : absolute;
-  top: 30px;
-}
-nav{
-  justify-content: space-between;
-}
-a {
-  color : white;
-}
-a:hover{
-  font-weight:bold;
-}
-footer{
-  display:flex;
-  background: #000000;
-  position: absolute;
-  bottom: 0;
-  padding: 30px;
-  width: 100%;
-  justify-content: space-between;
-  color : #6a6a6a;
-}
-.contact{
-  justify-content: space-between;
-
-}
-.box{
-  display : flex;
-  height : 25vh;
-  width : 40vw;
-  margin : 20vh;
-  color : white;
-  flex-direction : column;
+  font-family: ariai,sans-serif;
   justify-content: center;
-  align-items : center;
-  border : 2px solid white;
-  border-radius : 13px;
+  display: flex;
+  margin: 0;
+  color: white;
+  min-height: 100vh;
+  background: #000;
+  border: 2px solid blue;
+  flex-direction: column;
 }
-.new{
- /* border: 2px solid red;*/
-  padding: 20px;
-  height: 90vh;
-  width: 100vw;
-  position: relative;
+.innerbody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  border: 2px solid green;
 }
-
-.heading{
-  /*border: 2px solid blue;*/
-  padding: 60px;
-  position:absolute;
-  top:30;
+.header1{
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  border: 2px solid red;
+  justify-content: center;
+  flex-shrink: 0;
 }
-@media (max-width : 500px){
-  .box{
-    width: 60vw;
-    margin: 10vh;
-    margin-top: 30vh;
-    height: 25vh;
-    padding: 10px;
-    font-size: 10px;
-    flex-direction: column;
-  }
-  footer{
-    width: 100vw;
-    justify-content: space-between;
-    box-sizing: border-box;
-    left: 5px;
-  }
-  body{
-    overflow: scroll;
-  }
-  .main{
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    margin-top : 5px;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.headerflex{
+  display : flex;
+  width : 800px;
+  justify-content: space-between;
+  align-items: center;
+  height: 69px;
 }
 
-
+.name{
+  font-family: "Courier New",monospace;
+  font-weight: bold;
+  font-size: 24px;
+}
+.nav li{
+  display: inline;
+}
+.status{
+  border: 2px solid white;
+  display :flex;
+  justify-content:center;
+  align-items: center;
+}
