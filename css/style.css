@@ -103,7 +103,6 @@ a:hover{
   }
   body{
     overflow: hidden;
-    border:2px solid red;
   }
   header {width:100%;}
   header{overflow:hidden;}
