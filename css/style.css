@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+ 
   box-sizing: border-box;
 }
 body{
@@ -26,14 +27,14 @@ body{
   font-weight: bold;
 }
 .header1{
-  position: absolute;
-  top: 0;
+  /*! position: absolute; */
+  /*! top: 0; */
+  position: relative;
   padding: 10px;
   box-sizing: border-box;
   min-width: 100vw;
   overflow: auto;
   display: flex;
-  border: 2px solig green;
   justify-content: center;
   flex-shrink: 0;
 }
@@ -62,39 +63,66 @@ a:hover{
   display: inline;
 }
 .content{
-  margin:0;
+  margin:0 ;
   display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
   height: 60vh;
-  padding: 40px;
+  padding: 60px;
 }
 .para{
   display:flex;
   height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px;
   width: 100%;
 }
+.langs{
+  margin:10px;padding:10px;display:flex;flex-direction:row;color:white;font-size:25px;justify-content:center;min-width:100%;
+}
+.langs i{
+  margin: 5px;
+}
+#about{
+  padding:10px;
+  justify-content:center;
+}
+img{
+  border-radius: 17px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
 .status{
   display :flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 40vw;
+  width: 100%;
   height: 40vh;
+ 
+  font-size: 40px;
+
   border-radius: 12px;
   justify-content:center;
   align-items: center;
 }
+
 .myfoot{
-  position: absolute;
+  /*! position: absolute; */
   bottom:0;
   min-width: 800px;
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+.central{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  margin: 0 auto;
+  flex: 1 auto;
+  padding: 20px;
+  max-width: 70%;
+  position: relative;
 }
 @media(max-width:700px){
   .myfoot{
