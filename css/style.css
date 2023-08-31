@@ -129,8 +129,14 @@ img{
     width:100%;
     min-width: 100%;
   }
+  .central{
+    max-width: 100%
+  }
+  .header1{
+    padding: 25px;
+  }
   body{
-    overflow: hidden;
+    overflow: scroll;
   }
   header {width:100%;}
   header{overflow:hidden;}
