@@ -1,7 +1,7 @@
 *{
   padding: 0;
   margin: 0;
- 
+  overflow-x:hidden;
   box-sizing: border-box;
 }
 body{
@@ -113,6 +113,36 @@ img{
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+.paracontent{
+    min-width: 60vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: space-between;
+    min-height: 85vh;
+    max-width: 70vw;
+    text-align: center;
+    padding: 20px;
+    border:2px dotted white;
+    border-radius: 12px;
+}
+.blogtitle{
+    padding:10px;
+    justify-content: center;
+    display: flex;
+}
+.bloglist{
+    min-height: 60vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+}
+.blogentry{
+    margin:30px;
+    display: flex;
+    justify-content: center;
 }
 .central{
   display:flex;
