@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body{
-  font-family: ariai,sans-serif;
+  font-family: "Courier New",monospace;
   justify-content: center;
   line-height: 1.5;
   display: flex;
