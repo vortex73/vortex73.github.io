@@ -1,50 +1,19 @@
 *{
-  padding: 0;
-  margin: 0;
-  overflow-x:hidden;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    font-family: "Courier New", monospace;
 }
-body{
-  font-family: "Courier New",monospace;
-  justify-content: center;
-  line-height: 1.5;
-  display: flex;
-  margin: 0;
-  color: white;
-  min-height: 100vh;
-  background: #000;
-  flex-direction: column;
-}
-.innerbody{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
 
+.meta{
+   display: flex;
+   max-width: 60%;
+   flex-direction: column;
+   margin: 10px;
 }
-.about{
-  font-weight: bold;
-}
-.header1{
-  /*! position: absolute; */
-  /*! top: 0; */
-  position: relative;
-  padding: 10px;
-  box-sizing: border-box;
-  min-width: 100vw;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.headerflex{
-  display : flex;
-  width : 800px;
-  justify-content: space-between;
-  align-items: center;
-  height: 69px;
-}
+
 a{
   color:white;
   text-decoration: none;
@@ -53,125 +22,42 @@ a:hover{
   font-weight: bold;
 }
 
-.name{
-  font-family: "Courier New",monospace;
-  font-weight: bold;
-  font-size: 24px;
-}
-.nav li{
-  font-family: "Courier New",monospace;
-  display: inline;
-}
-.content{
-  margin:0 ;
-  display: flex;
-  position: absolute;
-  height: 60vh;
-  padding: 60px;
-}
-.para{
-  display:flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  width: 100%;
-}
-.langs{
-  margin:10px;padding:10px;display:flex;flex-direction:row;color:white;font-size:25px;justify-content:center;min-width:100%;
-}
-.langs i{
-  margin: 5px;
-}
-#about{
-  padding:10px;
-  justify-content:center;
-}
-img{
-  border-radius: 17px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-}
-.status{
-  display :flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  height: 40vh;
- 
-  font-size: 40px;
-
-  border-radius: 12px;
-  justify-content:center;
-  align-items: center;
+.masthead {
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 70%;
 }
 
-.myfoot{
-  /*! position: absolute; */
-  bottom:0;
-  min-width: 800px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+nav li{
+    display: inline;
 }
-.paracontent{
-    min-width: 60vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: space-between;
-    min-height: 85vh;
-    max-width: 70vw;
-    text-align: center;
+ul li{
+    display: inline;
+}
+
+header{
     padding: 20px;
-    border:2px dotted white;
-    border-radius: 12px;
-}
-.blogtitle{
-    padding:10px;
-    justify-content: center;
     display: flex;
-}
-.bloglist{
-    min-height: 60vh;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding:20px;
+    flex-direction: row;
 }
-.blogentry{
-    margin:30px;
+.parent{
     display: flex;
     justify-content: center;
 }
-.central{
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  margin: 0 auto;
-  flex: 1 auto;
-  padding: 20px;
-  max-width: 70%;
-  position: relative;
+
+p { 
+    margin: 1em 0;
+    line-height: 1.5em;
 }
-@media(max-width:700px){
-  .myfoot{
-    width:100%;
-    min-width: 100%;
-  }
-  .central{
-    max-width: 100%
-  }
-  .header1{
-    padding: 25px;
-  }
-  body{
-    overflow: scroll;
-  }
-  header {width:100%;}
-  header{overflow:hidden;}
-  .status{
-    height:40vw;
-    padding:10px;
-  }
+
+h2, h1 {
+    margin: 1.2em 0 0.6em 0;
+}
+
+.content{
+    line-height: 2.0em;
+    text-align: left;
+    max-width: 60%;
+    margin: 20px;
 }
