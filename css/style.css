@@ -25,6 +25,11 @@ pre{
     border-radius: 12px;
     padding-left: 20px;
     overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+pre::-webkit-scrollbar {
+  display: none;
 }
 
 code{
