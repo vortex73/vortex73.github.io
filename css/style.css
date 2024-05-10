@@ -72,6 +72,7 @@ header{
 .parent{
     display: flex;
     justify-content: center;
+    min-height: 75vh;
 }
 
 p { 
@@ -87,7 +88,9 @@ h2, h1 {
     line-height: 1.5;
     text-align: left;
     max-width: 60%;
+    justify-content: center;
     margin: 20px;
+    min-height: 100%;
 }
 
 footer {
