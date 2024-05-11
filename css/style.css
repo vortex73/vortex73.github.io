@@ -16,7 +16,6 @@ img{
 body{
     line-height: 1.5;
     text-rendering: optimizeLegibility;
-    
     letter-spacing: 0.2px;
     font-size: 1rem;
 }
@@ -121,5 +120,6 @@ footer {
     code { font-size:0.7em;border-radius:0.5em}
     pre {border-radius: 0.5em;}
     nav {font-size: 1.5em; display: flex;align-items: center;}
+    .masthead{font-size: 14px;}
 }
 
