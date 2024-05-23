@@ -2,9 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: #121212;
-    color: #d7d7d7;
-    font-family: "Verdana", sans-serif;
+   
+    
+    /*! font-family: "Verdana", sans-serif; */
 }
 
 img{
@@ -18,6 +18,8 @@ body{
     text-rendering: optimizeLegibility;
     letter-spacing: 0.2px;
     font-size: 1rem;
+    background: #121212;
+    color: #d7d7d7;
 }
 
 pre{
@@ -121,5 +123,53 @@ footer {
     pre {border-radius: 0.5em;}
     nav {font-size: 1.5em; display: flex;align-items: center;}
     .masthead{font-size: 14px;}
+}
+
+BODY {
+  font-weight: normal;
+}
+
+.keyword {
+  color: #FF9D00; /* Sonokai Orange */
+  font-weight: bold;
+}
+
+.string {
+  color: #A5C26B; /* Sonokai Green */
+}
+
+.comment {
+  color: #708090; /* Sonokai Gray */
+  font-style: italic;
+}
+
+.number {
+  color: #A5C26B; /* Sonokai Green */
+}
+
+.type {
+  color: #76ccE0; /* Sonokai White */
+  text-decoration: underline;
+}
+
+.preproc {
+  color: #D30102; /* Sonokai Red */
+}
+
+.function {
+  color: #FC5D7C; /* Sonokai White */
+  font-weight: bold;
+}
+
+.normal {
+  color: #9ED072; /* Sonokai White */
+}
+
+.symbol {
+  color: #9ED072; /* Sonokai White */
+}
+
+.cbracket {
+  color: #E2E2E3; /* Sonokai White */
 }
 
