@@ -3,7 +3,7 @@
 % type: post
 % draft: false
 % description: 
-% tags: post,article,test,bleh
+% tags: post,article,test,bleh,project
 
 There are several amazing SSGs out there, like [Hugo](https://gohugo.io/) and
 [11ty](https://www.11ty.dev/). Building your own SSG is an amazing learning

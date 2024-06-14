@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: 0;
+    /*! margin: 0; */
     box-sizing: border-box;
    
     
@@ -22,6 +22,8 @@ body{
     font-size: 1rem;
     background: #121212;
     color: #d7d7d7;
+    display: flex;
+    flex-direction: column;
 }
 
 pre{
@@ -138,6 +140,7 @@ footer {
     align-self: center;
     padding: 1rem 0;
     text-align: center;
+    margin-top: auto;
 }
 
 @media (max-width: 600px) {
@@ -150,6 +153,8 @@ footer {
 
 BODY {
   font-weight: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 .keyword {
