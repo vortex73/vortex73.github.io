@@ -1,5 +1,5 @@
 % title: About Me
-% type: post
+% type: about
 % date: 25/05/2024
 % author: vortex
 
