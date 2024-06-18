@@ -1,9 +1,9 @@
 % title: Ludicrosity
-% description: bruh what
+% description: A Static Site Generator in Zig
 % tags: zig,ssg,project
 % type: post
 % author: vortex
-% date: 10/05/2024
+% date: 2024-05-10
 
 Writing a blog can be quite the demanding task if you're not equipped with the right tools and strategies.
 Enter *Ludicrosity* a static site generator written in Zig.
@@ -23,8 +23,9 @@ A static site generator in Zig
 Its awesome but not perfect. Here's a list of things I need to get to at some point.
    ```text
 
-   - [ ] Fix tagging
-   - [ ] Sorting Posts
+   - [x] Fix tagging
+   - [x] Sorting Posts
+   - [ ] Syntax Highlihgting
    - [ ] Searching through posts
    - [ ] Making code more modular
 
