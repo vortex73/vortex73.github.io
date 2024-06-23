@@ -86,7 +86,7 @@ body a{
 color: #088F8F;
 }
 footer a{
-    color: #088F8F;
+    color: cyan;
 }
 .parent a::before{
     content: '#';
