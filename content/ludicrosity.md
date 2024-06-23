@@ -76,8 +76,6 @@ The project was built from the ground up with an emphasis on speed. Meticulous e
 
 - Time to render 4000 copies of this post!
 
-> Checkout [Zero](https://github.com/procub3r/zero) another insane SSG written in Zig! :D
-
 ## Project Structure
 Ludicrosity is highly opinionated. Which means you need to adhere to the following file structure strictly.
 
@@ -150,3 +148,9 @@ Mention the tagname as per what was mentioned in the `Metamatter` block inside a
 
 ```
 Ludicrosity supports recursive snippets functionality. Define the snippet in `templates/snippets/` and use inside templates using the syntax `<!--@snippet@-->`.
+
+## Inspirations:
+
+- [Saaru](https://github.com/anirudhRowjee/saaru) : An opinonated Static Site Generator written in Rust.
+- [Anna](https://github.com/anna-ssg/anna) : A Static Site Generator in Go aimed at performance.
+- [Zero](https://github.com/procub3r/zero) : An insane Static Site Generator in Zig!
