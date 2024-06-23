@@ -84,7 +84,9 @@ body a{
 }
 .parent a{
 color: #088F8F;
-
+}
+footer a{
+    color: #088F8F;
 }
 .parent a::before{
     content: '#';
