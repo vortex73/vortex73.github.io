@@ -177,11 +177,12 @@ footer {
 }
 
 @media (max-width: 600px) {
-	html { font-size: 0.4rem; }
-    code { font-size:0.7em;border-radius:0.5em}
+	html { font-size: 0.7rem; }
+    code {border-radius:0.5em}
+    .parent{padding:15px;}
     pre {border-radius: 0.5em;}
-    nav {font-size: 1.5em; display: flex;align-items: center;}
-    .masthead{font-size: 14px;}
+    nav { display: flex;align-items: center;}
+    .masthead{}
 }
 
 BODY {
