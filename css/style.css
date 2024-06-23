@@ -82,6 +82,10 @@ body a{
   color:white;
   text-decoration: none;
 }
+.parent a{
+color: #088F8F;
+
+}
 .parent a::before{
     content: '#';
 }
