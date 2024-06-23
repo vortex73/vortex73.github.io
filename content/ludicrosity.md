@@ -25,6 +25,8 @@ Its awesome but not perfect. Here's a list of things I need to get to at some po
 
    - [x] Fix tagging
    - [x] Sorting Posts
+   - [ ] File render caching
+   - [ ] User defined pages
    - [ ] Syntax Highlihgting
    - [ ] Searching through posts
    - [ ] Making code more modular
@@ -32,6 +34,18 @@ Its awesome but not perfect. Here's a list of things I need to get to at some po
    ```
 
 ## Building Ludicrosity
+I personally write notes in [markdown](https://en.wikipedia.org/wiki/Markdown) for everything that I learn. The necessity for a static site generator was birthed by the need to publish all of these into a mass accessible medium like a website.
+
+> Why a static site?
+> Static Sites are simple and quick to host with minimal(and in my case *no*) interaction with javascript.
+
+v0.1 of Ludicrosity was built purely using Vanilla javascript(*yeah*). This was the foundation of the core of the engine and where the *unique* templating format was born!
+> find the legacy version [here!](https://github.com/vortex73/ludicrosity/tree/archive).
+
+However JS while *quite powerful* can be difficult to manage over time in larger projects. *enter:* [Zig](https://ziglang.org/), a relatively new systems programming language with a more controlled environment with an emphasis on memory safety. It also helped that I was learning Zig concurrently at the time.
+
+Ludicrosity can feed on full-fledged markdown and churn out a static site.
+
 All source code for ludicrosity is housed within one single `src/marked.zig` for ultimate simplicity.
 Currently we depend on one dependency [md4c](https://github.com/mity/md4c) for markdown parsing.
 To build the project we expect the following source tree:
@@ -55,6 +69,13 @@ zig build -Doptimize=ReleaseFast
 
 ```
 
+## Benchmarking
+The project was built from the ground up with an emphasis on speed. Meticulous efforts have gone into reducing the number of system-calls that Ludicrosity makes per file render. While a *LOT* more can be done, here's the current measure:
+
+![bench](/assets/bench.png)
+
+> Checkout [Zero](https://github.com/procub3r/zero) another insane SSG written in Zig! :D
+
 ## Project Structure
 Ludicrosity is highly opinionated. Which means you need to adhere to the following file structure strictly.
 
@@ -73,7 +94,10 @@ Ludicrosity is highly opinionated. Which means you need to adhere to the followi
 └── templates
     └── post.html
     └── tags.html
-    └── snippets(coming soon)
+    └── snippets
+        └── header.html
+        └── footer.html
+        └── ...
 
 ```
 
@@ -115,3 +139,12 @@ Ludicrosity has limited templating capabilities at the moment.
 ```
 Mention the tagname as per what was mentioned in the `Metamatter` block inside an HTML comment element. This will be substituted for the posts' actual metadata.
 `<!--BODY-->` is exclusively reserved for the body of the post. 
+### Snippets
+```text
+
+<!--@header@-->
+...
+<!--@footer@-->
+
+```
+Ludicrosity supports recursive snippets functionality. Define the snippet in `templates/snippets/` and use inside templates using the syntax `<!--@snippet@-->`.

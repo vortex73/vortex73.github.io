@@ -8,16 +8,17 @@
     </head>
     <body>
         <header>
-            <div class="masthead">
-                <a href="/rendered/index.html">[NARAYAN]</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/rendered/about.html">[about]</a></li>
-                    <li><a href="/rendered/list.html">[blogs]</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="masthead">
+        <a href="/rendered/index.html">[NARAYAN]</a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/rendered/about.html">[about]</a></li>
+            <li><a href="/rendered/list.html">[blogs]</a></li>
+        </ul>
+    </nav>
+</header>
+
         <hr>
         <div class="parent">
         <div class="content">
@@ -25,8 +26,7 @@
             <div class="meta">
                 <ul>
                     date: 2024-05-10<br> 
-                    type: post<br>
-                    <ul>tags: <li><a href="../tags/project.html">[project]</a></li> <li><a href="../tags/ssg.html">[ssg]</a></li> <li><a href="../tags/zig.html">[zig]</a></li> </ul>
+                    <ul>tags: <li><a href="/tags/project.html">[project]</a></li> <li><a href="/tags/ssg.html">[ssg]</a></li> <li><a href="/tags/zig.html">[zig]</a></li> </ul>
                 </ul>
             </div>
             <hr>
@@ -46,12 +46,25 @@ A static site generator in Zig
 <pre><code class="language-text">
 - [x] Fix tagging
 - [x] Sorting Posts
+- [ ] File render caching
+- [ ] User defined pages
 - [ ] Syntax Highlihgting
 - [ ] Searching through posts
 - [ ] Making code more modular
 
 </code></pre>
 <h2>Building Ludicrosity</h2>
+<p>I personally write notes in <a href="https://en.wikipedia.org/wiki/Markdown">markdown</a> for everything that I learn. The necessity for a static site generator was birthed by the need to publish all of these into a mass accessible medium like a website.</p>
+<blockquote>
+<p>Why a static site?
+Static Sites are simple and quick to host with minimal(and in my case <em>no</em>) interaction with javascript.</p>
+</blockquote>
+<p>v0.1 of Ludicrosity was built purely using Vanilla javascript(<em>yeah</em>). This was the foundation of the core of the engine and where the <em>unique</em> templating format was born!</p>
+<blockquote>
+<p>find the legacy version <a href="https://github.com/vortex73/ludicrosity/tree/archive">here!</a>.</p>
+</blockquote>
+<p>However JS while <em>quite powerful</em> can be difficult to manage over time in larger projects. <em>enter:</em> <a href="https://ziglang.org/">Zig</a>, a relatively new systems programming language with a more controlled environment with an emphasis on memory safety. It also helped that I was learning Zig concurrently at the time.</p>
+<p>Ludicrosity can feed on full-fledged markdown and churn out a static site.</p>
 <p>All source code for ludicrosity is housed within one single <code>src/marked.zig</code> for ultimate simplicity.
 Currently we depend on one dependency <a href="https://github.com/mity/md4c">md4c</a> for markdown parsing.
 To build the project we expect the following source tree:</p>
@@ -69,6 +82,12 @@ git clone git@github.com:vortex73/ludicrosity.git --recurse-submodules # pulls e
 zig build -Doptimize=ReleaseFast
 
 </code></pre>
+<h2>Benchmarking</h2>
+<p>The project was built from the ground up with an emphasis on speed. Meticulous efforts have gone into reducing the number of system-calls that Ludicrosity makes per file render. While a <em>LOT</em> more can be done, here's the current measure:</p>
+<p><img src="/assets/bench.png" alt="bench"></p>
+<blockquote>
+<p>Checkout <a href="https://github.com/procub3r/zero">Zero</a> another insane SSG written in Zig! :D</p>
+</blockquote>
 <h2>Project Structure</h2>
 <p>Ludicrosity is highly opinionated. Which means you need to adhere to the following file structure strictly.</p>
 <pre><code class="language-text">
@@ -85,7 +104,10 @@ zig build -Doptimize=ReleaseFast
 └── templates
     └── post.html
     └── tags.html
-    └── snippets(coming soon)
+    └── snippets
+        └── header.html
+        └── footer.html
+        └── ...
 
 </code></pre>
 <p>Ludicrosity will read template files <code>post.html</code> and <code>tags.html</code>, and render the converted markdown into them and store them in the <code>rendered/</code> directory.
@@ -119,9 +141,18 @@ A file will be created for each tag listing all posts referencing that particula
 </code></pre>
 <p>Mention the tagname as per what was mentioned in the <code>Metamatter</code> block inside an HTML comment element. This will be substituted for the posts' actual metadata.
 <code>&lt;!--BODY--&gt;</code> is exclusively reserved for the body of the post.</p>
+<h3>Snippets</h3>
+<pre><code class="language-text">
+&lt;!--@header@--&gt;
+...
+&lt;!--@footer@--&gt;
+
+</code></pre>
+<p>Ludicrosity supports recursive snippets functionality. Define the snippet in <code>templates/snippets/</code> and use inside templates using the syntax <code>&lt;!--@snippet@--&gt;</code>.</p>
  
         </div>
         </div>
-    <footer>Rendered with ⚡ using <a href="https://github.com/vortex73/ludicrosity">ludicrosity</a></footer>
+        <footer>Rendered with ⚡ using <a href="https://github.com/vortex73/ludicrosity">ludicrosity</a></footer>
+
     </body>
 </html>

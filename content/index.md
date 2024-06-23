@@ -1,4 +1,4 @@
-% type: index
+% type: page
 % title: Narayan
 % image: ../assets/bicpic.jpg
 % imgdesc: Ensō
