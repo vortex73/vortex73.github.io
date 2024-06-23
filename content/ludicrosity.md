@@ -74,6 +74,8 @@ The project was built from the ground up with an emphasis on speed. Meticulous e
 
 ![bench](/assets/bench.png)
 
+- Time to render 4000 copies of this post!
+
 > Checkout [Zero](https://github.com/procub3r/zero) another insane SSG written in Zig! :D
 
 ## Project Structure
