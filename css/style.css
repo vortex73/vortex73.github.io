@@ -82,19 +82,27 @@ body a{
   text-decoration: none;
 }
 .parent a{
-color: #437DAD;
+color: cyan;
 }
 footer a{
     color: #437DAD;
 }
 .parent a::before{
-    content: '#';
+    content: '[';
+}
+.parent a::after{
+    content: ']';
 }
 .parent a:hover{
   font-weight: 450;
   color:cyan;
 }
-
+.entry a::before{
+    content: none;
+}
+.entry a::after{
+    content: none;
+}
 .masthead {
     font-size: 24px;
     font-weight: bold;
