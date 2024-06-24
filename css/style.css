@@ -85,7 +85,7 @@ body a{
 color: cyan;
 }
 footer a{
-    color: #cyan;
+    color: cyan;
 }
 .parent a::before{
     content: '[';
