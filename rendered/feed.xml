@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Vortex's Blog</title>
+    <link>https://vortex73.github.io</link>
+    <description>A collection of my thoughts</description>
+    <item>
+      <title>Ludicrosity</title>
+      <link>https://vortex73.github.io/rendered/ludicrosity.html</link>
+      <description>An SSG written in Zig</description>
+      <pubDate>Mon, 24 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://vortex73.github.io/rendered/ludicrosity.html</guid>
+    </item>
+    <!-- Add more items as needed -->
+  </channel>
+</rss>
