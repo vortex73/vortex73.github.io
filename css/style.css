@@ -38,6 +38,7 @@ blockquote p {
 
 body{
     font-family: "Verdana", sans-serif;
+    min-height: 100vh;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
     letter-spacing: 0.2px;
