@@ -1,4 +1,5 @@
 % type: page
+% date: 2024-05-11
 % title: Narayan
 % image: ../assets/bicpic.jpg
 % imgdesc: Ensō

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="A Static Site Generator in Zig">
         <title>Ludicrosity</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css">
         <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -45,7 +46,7 @@ A static site generator in Zig
 </code></pre>
 <h2>TODO</h2>
 <p>Its awesome but not perfect. Here's a list of things I need to get to at some point.</p>
-<pre><code class="language-text">
+<pre><code class="language-markdown">
 - [x] Fix tagging
 - [x] Sorting Posts
 - [ ] File render caching
@@ -70,7 +71,7 @@ Static Sites are simple and quick to host with minimal(and in my case <em>no</em
 <p>All source code for ludicrosity is housed within one single <code>src/marked.zig</code> for ultimate simplicity.
 Currently we depend on one dependency <a href="https://github.com/mity/md4c">md4c</a> for markdown parsing.
 To build the project we expect the following source tree:</p>
-<pre><code class="language-text">
+<pre><code class="language-sh">
 .
 ├── build.zig
 ├── md4c
@@ -79,7 +80,7 @@ To build the project we expect the following source tree:</p>
 
 </code></pre>
 <p>The project can be cloned and built using the following commands:</p>
-<pre><code class="language-text">
+<pre><code class="language-shell">
 git clone git@github.com:vortex73/ludicrosity.git --recurse-submodules # pulls even the md4c dependency
 zig build -Doptimize=ReleaseFast
 
@@ -92,7 +93,7 @@ zig build -Doptimize=ReleaseFast
 </ul>
 <h2>Project Structure</h2>
 <p>Ludicrosity is highly opinionated. Which means you need to adhere to the following file structure strictly.</p>
-<pre><code class="language-text">
+<pre><code class="language-shell">
 [project root]
 ├── assets
 ├── content
@@ -116,7 +117,7 @@ zig build -Doptimize=ReleaseFast
 A file will be created for each tag listing all posts referencing that particular tag in the <code>tags/</code> directory.</p>
 <h2>Metamatter<sup>TM</sup></h2>
 <p>While YAML frontmatter is great, I wanted something distinctly unique and yet easy to parse to store the metadata. Inspired heavily from the <a href="https://pandoc.org/chunkedhtml-demo/8.10-metadata-blocks.html">Pandoc</a> style of writing metadata, Ludicrosity uses its own frontmatter format called <code>Metamatter</code>. And its beautifully simple.</p>
-<pre><code class="language-text">
+<pre><code class="language-markdown">
 % title: Post0
 % date: 24/11/1951
 % author: mukesh
@@ -127,7 +128,7 @@ A file will be created for each tag listing all posts referencing that particula
 <p>Thats it!</p>
 <h2>Templating Language? What's that?</h2>
 <p>Ludicrosity has limited templating capabilities at the moment.</p>
-<pre><code class="language-text">
+<pre><code class="language-html">
 &lt;div class=&quot;content&quot;&gt;
     &lt;h1&gt;&lt;!--title--&gt;&lt;/h1&gt;
     &lt;div class=&quot;meta&quot;&gt;
@@ -144,7 +145,7 @@ A file will be created for each tag listing all posts referencing that particula
 <p>Mention the tagname as per what was mentioned in the <code>Metamatter</code> block inside an HTML comment element. This will be substituted for the posts' actual metadata.
 <code>&lt;!--BODY--&gt;</code> is exclusively reserved for the body of the post.</p>
 <h3>Snippets</h3>
-<pre><code class="language-text">
+<pre><code class="language-html">
 &lt;!--@header@--&gt;
 ...
 &lt;!--@footer@--&gt;
@@ -163,5 +164,8 @@ A file will be created for each tag listing all posts referencing that particula
         </div>
         <footer>Rendered with ⚡ using <a href="https://github.com/vortex73/ludicrosity">ludicrosity</a></footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
     </body>
 </html>

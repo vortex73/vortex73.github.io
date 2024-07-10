@@ -3,7 +3,7 @@
 % tags: zig,ssg,project
 % type: post
 % author: vortex
-% date: 2024-05-10
+% date:2024-05-10
 
 Writing a blog can be quite the demanding task if you're not equipped with the right tools and strategies.
 Enter *Ludicrosity* a static site generator written in Zig.
@@ -21,7 +21,7 @@ A static site generator in Zig
 
 ## TODO
 Its awesome but not perfect. Here's a list of things I need to get to at some point.
-   ```text
+   ```markdown
 
    - [x] Fix tagging
    - [x] Sorting Posts
@@ -50,7 +50,7 @@ All source code for ludicrosity is housed within one single `src/marked.zig` for
 Currently we depend on one dependency [md4c](https://github.com/mity/md4c) for markdown parsing.
 To build the project we expect the following source tree:
 
-```text
+```sh
 
 .
 ├── build.zig
@@ -62,7 +62,7 @@ To build the project we expect the following source tree:
 
 The project can be cloned and built using the following commands:
 
-```text
+```shell
 
 git clone git@github.com:vortex73/ludicrosity.git --recurse-submodules # pulls even the md4c dependency
 zig build -Doptimize=ReleaseFast
@@ -79,7 +79,7 @@ The project was built from the ground up with an emphasis on speed. Meticulous e
 ## Project Structure
 Ludicrosity is highly opinionated. Which means you need to adhere to the following file structure strictly.
 
-```text
+```shell
 
 [project root]
 ├── assets
@@ -107,7 +107,7 @@ A file will be created for each tag listing all posts referencing that particula
 ## Metamatter<sup>TM</sup>
 While YAML frontmatter is great, I wanted something distinctly unique and yet easy to parse to store the metadata. Inspired heavily from the [Pandoc](https://pandoc.org/chunkedhtml-demo/8.10-metadata-blocks.html) style of writing metadata, Ludicrosity uses its own frontmatter format called `Metamatter`. And its beautifully simple.
 
-```text
+```markdown
 
 % title: Post0
 % date: 24/11/1951
@@ -122,7 +122,7 @@ Thats it!
 
 Ludicrosity has limited templating capabilities at the moment.
 
-```text
+```html
 
 <div class="content">
     <h1><!--title--></h1>
@@ -140,7 +140,7 @@ Ludicrosity has limited templating capabilities at the moment.
 Mention the tagname as per what was mentioned in the `Metamatter` block inside an HTML comment element. This will be substituted for the posts' actual metadata.
 `<!--BODY-->` is exclusively reserved for the body of the post. 
 ### Snippets
-```text
+```html
 
 <!--@header@-->
 ...

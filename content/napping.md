@@ -21,10 +21,10 @@ This also works when the current page and the target are [cross-origin](https://
 
 Usually links with the `target='_blank'` and `rel="opener"` or even links without an explicit `rel="noopener"` may be vulnerable to this type of attack. A common way to abuse this is by:
 
-```text
+```javascript
 
 window.opener.parent.location.replace("custom.html")
-OR
+// OR
 window.opener.location = "custom.html"
 
 ```

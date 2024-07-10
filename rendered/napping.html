@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="A writeup on the tab nabbing vulnerability.">
         <title>Reverse Tab Nabbing</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css">
         <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -43,9 +44,9 @@
 <p>More about window properties <a href="https://www.sitepoint.com/javascript-window-object/">here</a>. Cross-Origin targets have a more limited access to properties though even they can replace the URL of the main page to redirect the user into a phishing site.
 This also works when the current page and the target are <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">cross-origin</a>.</p>
 <p>Usually links with the <code>target='_blank'</code> and <code>rel=&quot;opener&quot;</code> or even links without an explicit <code>rel=&quot;noopener&quot;</code> may be vulnerable to this type of attack. A common way to abuse this is by:</p>
-<pre><code class="language-text">
+<pre><code class="language-javascript">
 window.opener.parent.location.replace(&quot;custom.html&quot;)
-OR
+// OR
 window.opener.location = &quot;custom.html&quot;
 
 </code></pre>
@@ -85,5 +86,8 @@ window.opener.location = &quot;custom.html&quot;
         </div>
         <footer>Rendered with ⚡ using <a href="https://github.com/vortex73/ludicrosity">ludicrosity</a></footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
     </body>
 </html>
