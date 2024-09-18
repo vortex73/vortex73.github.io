@@ -15,11 +15,13 @@ This site is what I hope will serve as a consolidation of all my thoughts and pr
 - LLVM Compiler Infrastructure
 
 ## Projects that I'm Currently working on
-- Salazar Linux: A fully POSIX and BSD complaint system built from scratch fully usable with a package manager.
-- SalMan: A Package Manager written in Nim. 
+- Salazar Linux: A fully LSB complaint system built from scratch fully usable with a package manager.
+- PacDude: A Package Manager written in Zig. 
 
 ## Contact Me
 
 - [matrix](https://matrix.to/#/@vortex73:matrix.org/)
 - [discord](https://discord.com/users/717981427152584784/)
 - [linkedin](https://www.linkedin.com/in/narayansreekumar/)
+
+> For a secure channel consider using GPG encryption: 0xC243DBF4C0918997
