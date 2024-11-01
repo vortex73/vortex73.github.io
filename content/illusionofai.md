@@ -8,7 +8,7 @@
 
 Today, Artificial Intelligence has become the "dream job" for most people in the tech landscape, the golden ticket. The allure of these jobs fosters a sense of elitism, as many individuals feel privileged to be part of a field that promises innovation and influence, often overlooking the hard work and challenges that underpin such roles.
 
-As in Plato's *Allegory of a Cave* most people see only a fascade of what AI jobs really are. They're mesmerized by the glamour and oblivioud to the gritty, mundane reality that's often the case.
+As in Plato's *Allegory of a Cave* most people see only a fascade of what AI jobs really are. They're mesmerized by the glamour and oblivious to the gritty, mundane reality that's often the case.
 
 ![cave](../assets/cave.jpg)
 
