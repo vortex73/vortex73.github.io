@@ -1,8 +1,8 @@
 % title: The Clang AST
 % type: post
 % author: vortex
-% description: An overview of Clang's AST
-% date: 2024-11-5
+% description: Clang Clang Boom!
+% date: 2024-11-05
 % tags: llvm,clang,compilers
 
 While exploring LLVM discourse and diving into the source code, I came across [this talk](https://www.youtube.com/watch?v=VqCkCDFLSsc) that showcases the power and versatility of Clang's AST. This blog is a collection of my notes aimed at demystifying the structure and intricacies od Clang's *huge* AST which is pivotal in the compilation of C/C++ and other languages.
@@ -19,7 +19,7 @@ At its core, Clang operates in multiple stages:
 [Front] -> [Middle] -> [Back]
 ```
 
-# Why is it special
+# Why is it special?
 Clang’s AST isn't just another structure for holding the pieces of code. It’s a masterfully crafted system that optimizes for clarity and efficiency, providing several key advantages:
 
 - **Precision in Source Locations**: Imagine being able to pinpoint the exact location of every variable, function, and statement in a program with absolute precision. Clang’s AST does just that, maintaining an exact map of each source code element’s position. This is like having a map that not only tells you where each landmark is but also provides detailed street names.

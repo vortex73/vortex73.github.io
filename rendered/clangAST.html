@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="An overview of Clang's AST">
+        <meta name="description" content="Clang Clang Boom!">
         <title>The Clang AST</title>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark-reasonable.min.css">
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
         <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -27,7 +28,7 @@
             <h1>The Clang AST</h1>
             <div class="meta">
                 <ul>
-                    <li>date: 2024-11-5</li> 
+                    <li>date: 2024-11-05</li> 
                     <li><ul>tags: <li><a href="/tags/compilers.html">compilers</a></li> <li><a href="/tags/clang.html">clang</a></li> <li><a href="/tags/llvm.html">llvm</a></li> </ul></li>
                 </ul>
             </div>
@@ -43,7 +44,7 @@
              +---------&gt;|
 [Front] -&gt; [Middle] -&gt; [Back]
 </code></pre>
-<h1>Why is it special</h1>
+<h1>Why is it special?</h1>
 <p>Clang’s AST isn't just another structure for holding the pieces of code. It’s a masterfully crafted system that optimizes for clarity and efficiency, providing several key advantages:</p>
 <ul>
 <li><p><strong>Precision in Source Locations</strong>: Imagine being able to pinpoint the exact location of every variable, function, and statement in a program with absolute precision. Clang’s AST does just that, maintaining an exact map of each source code element’s position. This is like having a map that not only tells you where each landmark is but also provides detailed street names.</p>
@@ -258,6 +259,10 @@ Location: test.cpp:11:5
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     
-    <script>hljs.highlightAll();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/cmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/languages/bash.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
     </body>
 </html>
